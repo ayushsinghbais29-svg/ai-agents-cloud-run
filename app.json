@@ -1,1 +1,26 @@
-{"name":"Your Application Name","description":"This is the application for deploying to Cloud Run.","env":{"GEMINI_API_KEY":"your_gemini_api_key","CLOUD_RUN_REGION":"your_region","ADK_CONFIG":"your_adk_config"},"cloudRun":{"cpu":"1","memory":"512Mi","timeout":"300s","maxInstances":"5","minInstances":"1"}}
+{
+  "name": "ai-agents-cloud-run",
+  "description": "AI agent built with Google Gemini, deployed on Cloud Run.",
+  "env": {
+    "GEMINI_API_KEY": {
+      "description": "Gemini API key from Google AI Studio",
+      "required": true
+    },
+    "GEMINI_MODEL": {
+      "description": "Gemini model name",
+      "value": "gemini-2.0-flash",
+      "required": false
+    }
+  },
+  "cloudRun": {
+    "project": "upbeat-sunup-490813-f5",
+    "region": "asia-south1",
+    "service": "ai-agents-cloud-run",
+    "cpu": "1",
+    "memory": "512Mi",
+    "timeout": "300s",
+    "maxInstances": "5",
+    "minInstances": "1",
+    "port": "8080"
+  }
+}
